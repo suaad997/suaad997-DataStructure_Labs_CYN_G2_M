@@ -1,24 +1,33 @@
 package Arrays;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class Lab_2 {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         Array arr =new Array();
-        int []numbers={1,2,3,4,5};
+        int []numbers={9,2,3,4,12,7,6,1};
 
-        System.out.println("enter number to search:");
-        int value=scanner.nextInt();
+//        Arrays.sort(numbers);
+//        arr.traversal(numbers);
+//        System.out.println();
+//        int result=arr.BinarySearch(numbers,0,numbers.length-1,9);
+//        if(result!=-1)
+//            System.out.println("your value found at index :"+result);
+//        else
+//            System.out.println("index not found");
+
+//        arr.shitLeft_delete(numbers,2);
+//        arr.traversal(numbers);
+
+//        System.out.println("enter number to search:");
+//        int value=scanner.nextInt();
 
         //  arr.update(numbers,3,7);
         //  arr.delete(numbers,3);
         // int result= arr.LinearSearch(numbers,2);
-        int result=arr.BinarySearch(numbers,0,5,value);
-        if(result!=-1)
-            System.out.println("your value found at index :"+result);
-        else
-            System.out.println("index not found");
+
 
 
 

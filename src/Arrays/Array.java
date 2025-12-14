@@ -54,6 +54,15 @@ public class Array {
             a[index]=0;
 
     }
+    public void shitLeft_delete(int []a,int index){
+        for (int i=index;i<a.length-1;i++)
+            a[i]=a[i+1];
+
+        a[a.length-1]=Integer.MIN_VALUE;
+
+
+    }
+
     //{1,2,3,4}  //2
     public int LinearSearch(int []a, int value){
         for(int i=0; i<a.length-1;i++){
@@ -66,19 +75,17 @@ public class Array {
 
     }
 
-    public int BinarySearch(int []a,int findex,int lindex,int value)
+    public int BinarySearch(int []a,int findex,int lindex,int svalue)
     {
-        //{1,2,3,4,5,6}  4
+        //{1,2,3,4,5,6}  s=5   f=3  l=5
         while (findex<=lindex){
-
-            int mid=(findex+lindex)/2;
-            if (value==a[mid])
+            int mid=(findex+lindex)/2;   //m=4
+            if (svalue==a[mid])
                 return mid;
-            if(value<a[mid])
+            if(svalue<a[mid])
                 lindex=mid-1;
-            if(value>a[mid])
+            if(svalue>a[mid])
                 findex=mid+1;
-
         }
 
         return -1;
