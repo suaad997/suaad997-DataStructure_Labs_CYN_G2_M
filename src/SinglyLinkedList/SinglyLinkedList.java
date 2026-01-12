@@ -33,6 +33,7 @@ public E removeFirst(){
         tail=head;
     return delete;
 }
+
 public void display(){
     Node<E> temp =head;
     while (temp!=null){
@@ -41,8 +42,16 @@ public void display(){
     }
     System.out.println(" null \n");
 
-
 }
+    public void display2(){
+        Node<E> temp =head;
+        while (temp!=null){
+            System.out.println(temp.getData());
+            temp=temp.getNext();
+        }
+
+
+    }
 public void addLast(E data){
     Node<E> newNode=new Node(data,null);
     if (isEmpty()){
